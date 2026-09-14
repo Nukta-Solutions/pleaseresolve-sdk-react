@@ -1,0 +1,38 @@
+{
+  "name": "@pleaseresolve/react",
+  "version": "0.1.0",
+  "description": "React bindings for @pleaseresolve/sdk — a <ReportWidget /> component and a useReportWidget() hook.",
+  "license": "MIT",
+  "keywords": ["please-resolve", "react", "bug-report", "issue-tracker", "widget", "feedback"],
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "dependencies": {
+    "@pleaseresolve/sdk": "file:../pleaseresolve-sdk"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
