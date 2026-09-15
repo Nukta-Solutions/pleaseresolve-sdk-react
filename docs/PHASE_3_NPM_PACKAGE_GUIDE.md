@@ -39,6 +39,14 @@ public, still locked to `report:create` only. See
 
 ## Plain JS/TS — `@pleaseresolve/sdk`
 
+**Zero config in your code**: set `.env` (`NEXT_PUBLIC_PLEASERESOLVE_KEY=pk_live_...`, optionally
+`NEXT_PUBLIC_PLEASERESOLVE_PROJECT_ID`), then `import "@pleaseresolve/sdk/auto";` once, anywhere in
+your app's entry point — no `init()` call anywhere. Works because your own bundler (Next.js, CRA)
+inlines `NEXT_PUBLIC_...` env vars at build time; see the package README for exactly which
+frameworks this covers.
+
+Or configure explicitly instead:
+
 ```ts
 import { init, report, identify, setMetadata, open, close } from "@pleaseresolve/sdk";
 
@@ -66,10 +74,26 @@ its lifecycle manually rather than through `@pleaseresolve/react`), is documente
 
 ## React — `@pleaseresolve/react`
 
+Same env vars as above, plus `<ReportWidget />` with no props:
+
+```tsx
+import { ReportWidget } from "@pleaseresolve/react";
+
+function App() {
+  return (
+    <>
+      <ReportWidget /> {/* reads NEXT_PUBLIC_PLEASERESOLVE_KEY/PROJECT_ID */}
+      {/* rest of your app */}
+    </>
+  );
+}
+```
+
+Or pass props explicitly (always wins over the env var):
+
 ```tsx
 import { ReportWidget, useReportWidget } from "@pleaseresolve/react";
 
-// Render once, near your app's root:
 function App() {
   return (
     <>
