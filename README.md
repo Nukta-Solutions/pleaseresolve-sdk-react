@@ -65,10 +65,6 @@ An explicit prop always wins over the matching env var. Note the prop is `apiKey
 core SDK's `InitOptions.key` field is renamed here. This isn't a style choice; using `key` would
 silently receive no API key at all.
 
-`screenshot={false}` disables the built-in form's screenshot capture — see
-the core SDK's README for what that does and why it's consent-gated to the
-form only, never headless `report()` calls.
-
 ## Build
 
 ```sh
@@ -77,14 +73,13 @@ npm run build
 npm run typecheck
 ```
 
-**Local-dev gotcha**: this package depends on `@pleaseresolve/sdk` via `file:../pleaseresolve-sdk`,
-and npm's `file:` protocol copies the dependency in at install time rather than symlinking it —
-`npm install` alone does **not** pick up changes made to the core SDK afterward. After rebuilding
-`pleaseresolve-sdk`, refresh this package's copy of it before rebuilding here:
-
-```sh
-rm -rf node_modules/@pleaseresolve && npm install
-```
+This package depends on the real published `@pleaseresolve/sdk` (a semver range, e.g. `^0.2.0`) —
+not a local `file:` path. If you're developing both packages together locally and want to test
+unpublished core-SDK changes here before they're released, point the dependency at
+`file:../pleaseresolve-sdk` temporarily; npm's `file:` protocol copies the dependency in at
+install time rather than symlinking it, so a plain `npm install` alone does **not** pick up
+further changes — `rm -rf node_modules/@pleaseresolve && npm install` after every core-SDK
+rebuild. Revert to the real semver range before publishing.
 
 ## Testing
 
@@ -98,8 +93,8 @@ Requires a local `pleaseresolve-backend` on `:5000` and
 covers the React glue layer — `<ReportWidget />` calling `init()`/`destroy()`
 on mount/unmount, and `useReportWidget()`'s `open()` reaching the core
 widget via a custom trigger — not the widget UI itself (form fields,
-screenshot capture, submission), which `pleaseresolve-sdk`'s own
-`test-e2e.mjs` already covers in full.
+attachments, submission), which `pleaseresolve-sdk`'s own `test-e2e.mjs`
+already covers in full.
 
 ```sh
 node test-auto-init.mjs

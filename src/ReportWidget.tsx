@@ -46,7 +46,6 @@ export function ReportWidget({ apiKey, ...rest }: ReportWidgetProps) {
       key: resolvedKey,
       projectId: rest.projectId ?? env.projectId,
       apiBaseUrl: rest.apiBaseUrl ?? env.apiBaseUrl,
-      screenshot: rest.screenshot,
       widget: true,
     });
     return () => destroy();
@@ -55,7 +54,7 @@ export function ReportWidget({ apiKey, ...rest }: ReportWidgetProps) {
     // updates key/projectId/apiBaseUrl on the existing widget rather than
     // mounting a second one), so this doesn't need every prop.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [apiKey, rest.projectId, rest.apiBaseUrl, rest.screenshot]);
+  }, [apiKey, rest.projectId, rest.apiBaseUrl]);
 
   return null;
 }

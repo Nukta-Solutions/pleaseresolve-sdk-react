@@ -1,6 +1,6 @@
 {
   "name": "@pleaseresolve/react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React bindings for @pleaseresolve/sdk — a <ReportWidget /> component and a useReportWidget() hook.",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": ["please-resolve", "react", "bug-report", "issue-tracker", "widget", "feedback"],
@@ -32,7 +32,7 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@pleaseresolve/sdk": "^0.1.2"
+    "@pleaseresolve/sdk": "^0.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
