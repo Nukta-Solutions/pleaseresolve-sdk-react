@@ -4,7 +4,12 @@
   "description": "React bindings for @pleaseresolve/sdk — a <ReportWidget /> component and a useReportWidget() hook.",
   "license": "SEE LICENSE IN LICENSE",
   "keywords": ["please-resolve", "react", "bug-report", "issue-tracker", "widget", "feedback"],
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nukta-Solutions/pleaseresolve-sdk-react.git"
+  },
+  "homepage": "https://github.com/Nukta-Solutions/pleaseresolve-sdk-react#readme",
+  "bugs": "https://github.com/Nukta-Solutions/pleaseresolve-sdk-react/issues",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -27,7 +32,7 @@
     "react": ">=16.8.0"
   },
   "dependencies": {
-    "@pleaseresolve/sdk": "file:../pleaseresolve-sdk"
+    "@pleaseresolve/sdk": "^0.1.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
