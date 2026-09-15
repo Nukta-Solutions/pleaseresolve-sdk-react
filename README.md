@@ -108,3 +108,11 @@ node test-auto-init.mjs
 A second test proving the zero-props path specifically: a real React app bundled with esbuild
 (Next.js-equivalent `process.env.NEXT_PUBLIC_...` substitution), rendering `<ReportWidget />` with
 no props whatsoever, confirmed to mount and complete a real submission anyway.
+
+## License
+
+**Proprietary — not open source.** This package is publicly installable so Please Resolve
+clients can `npm install` it and audit exactly what they're embedding, but it may only be used to
+integrate with the Please Resolve platform under an active Please Resolve account. See
+[LICENSE](./LICENSE) for the full terms — no rights to copy, modify, redistribute, or reuse this
+package independently of the Service are granted.

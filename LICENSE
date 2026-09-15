@@ -1,0 +1,52 @@
+Please Resolve React SDK — Proprietary License
+
+Copyright (c) 2026 Nukta Solutions. All rights reserved.
+
+This software and associated files (the "Software") are the proprietary
+property of Nukta Solutions ("Company") and are made available solely for
+integration with the Please Resolve platform ("Service") by Company's
+clients and their authorized users. This is not an open-source license.
+
+## Permitted use
+
+Subject to an active, valid Please Resolve account or agreement with
+Company, you are granted a limited, non-exclusive, non-transferable,
+revocable license to:
+
+- install and use the Software solely to embed Please Resolve
+  issue-reporting functionality into your own website(s) or application(s);
+  and
+- adapt your own integration code (e.g. configuration passed to `init()`,
+  environment variables) as needed for that purpose.
+
+## Restrictions
+
+Without Company's prior written consent, you may not:
+
+- use the Software independently of the Service, or continue using it after
+  your account or agreement with Company ends;
+- copy, modify, merge, reverse-engineer, or create derivative works of the
+  Software itself (as opposed to your own integration code), except as
+  reasonably needed to debug your own integration;
+- redistribute, sublicense, resell, rent, lease, or otherwise make the
+  Software available to any third party outside your own integration; or
+- use the Software, in whole or in part, to build or assist in building a
+  competing product or service.
+
+## No open-source license granted
+
+This repository and its npm package are publicly reachable for distribution
+and transparency only — so that Company's clients can `npm install` it and
+audit exactly what they are embedding on their sites. Public visibility does
+not grant any rights beyond those listed above. All rights not expressly
+granted are reserved by Nukta Solutions.
+
+## Disclaimer
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+NUKTA SOLUTIONS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF,
+OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -2,7 +2,7 @@
   "name": "@pleaseresolve/react",
   "version": "0.1.0",
   "description": "React bindings for @pleaseresolve/sdk — a <ReportWidget /> component and a useReportWidget() hook.",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "keywords": ["please-resolve", "react", "bug-report", "issue-tracker", "widget", "feedback"],
   "private": true,
   "type": "module",
